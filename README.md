@@ -1,9 +1,9 @@
-<p align="center"><img src="qfib.png" width="200" /></p>
+<p align="center"><img src="sources/Documentation/html/qfib.png" width="200" /></p>
 
 # Overview
 This software compress and decompress dMRI brain tractograms. Those tractograms should have been generated using a method that ensure a constant stepsize along each individual fiber. This property can be checked using our software. We currently can compress .tck files, and decompressed .qfib files. This is the C++ reference implementation for the paper: 
 
-**QFib: Fast and Efficient Brain Tractogram Compression** <br/>
+>**QFib: Fast and Efficient Brain Tractogram Compression** <br/>
 *Corentin Mercier\*, Sylvain Rousseau\*, Pietro Gori, Isabelle Bloch and Tamy Boubekeur.*<br/>
 (\* C. Mercier · S. Rousseau contributed equally to this work)<br/>
 NeuroInformatics 2020<br/>
