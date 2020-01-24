@@ -1,0 +1,19 @@
+FROM cpp-build-base:1.0 AS build
+
+WORKDIR /src
+
+COPY CMakeLists.txt ./
+COPY /sources ./sources
+COPY /eigen3 ./eigen3
+
+RUN mkdir build
+RUN cd build
+
+WORKDIR /src/build
+
+RUN cmake --version
+RUN pwd
+RUN cmake -DCMAKE_BUILD_TYPE=Release ..
+RUN make -j8
+
+ENTRYPOINT ["./qfib"]
