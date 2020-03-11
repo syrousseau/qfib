@@ -80,4 +80,6 @@ This project is licensed under the MIT license - see the [LICENSE](LICENSE) file
 
 All right reserved. The Authors
 # Data 
-Data can be generated using [MrTrix](https://www.mrtrix.org)
+Data can be generated using [MrTrix](https://www.mrtrix.org).
+
+Some examples are available here: https://gitlab.com/comercier/qfib-data
