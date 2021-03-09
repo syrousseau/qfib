@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['octdecode',['octDecode',['../oct_8hpp.html#a71f400acb64f1561bb5d6680e5c0fc23',1,'oct.hpp']]],
-  ['octencode',['octEncode',['../oct_8hpp.html#a1506592f3386f25fe9ad2aaa70839541',1,'oct.hpp']]]
+  ['main',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['meanmaxerror',['meanMaxError',['../utilities_8hpp.html#a8a2a5733d2bd9f77b4be0e542d1cb962',1,'utl']]]
 ];

@@ -70,16 +70,16 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab5e5c77dec64278196b6f58a6955e9a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8hpp.html#ab5e5c77dec64278196b6f58a6955e9a6">utl::meanMaxError</a> (const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibersA, const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibersB, float &amp;meanError, float &amp;maxError)</td></tr>
-<tr class="memdesc:ab5e5c77dec64278196b6f58a6955e9a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">meanMaxError Function to compute average and maximum error between two sets of fibers containing the exact same number of points and fibers  <a href="utilities_8hpp.html#ab5e5c77dec64278196b6f58a6955e9a6">More...</a><br /></td></tr>
-<tr class="separator:ab5e5c77dec64278196b6f58a6955e9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a361ee6d9967ba418806b016d7c287389"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8hpp.html#a361ee6d9967ba418806b016d7c287389">utl::error</a> (const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibersA, const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibersB, vector&lt; float &gt; &amp;minError, vector&lt; float &gt; &amp;meanError, vector&lt; float &gt; &amp;maxError, float &amp;minEndPointError, float &amp;meanEndPointError, float &amp;maxEndPointError, unsigned steps=10, float minValue=35, float maxValue=260)</td></tr>
-<tr class="memdesc:a361ee6d9967ba418806b016d7c287389"><td class="mdescLeft">&#160;</td><td class="mdescRight">error Function to compute the error between two sets of fibers with the exact same number of points and fibers This error is computed depending on the length of the fibers  <a href="utilities_8hpp.html#a361ee6d9967ba418806b016d7c287389">More...</a><br /></td></tr>
-<tr class="separator:a361ee6d9967ba418806b016d7c287389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a2a5733d2bd9f77b4be0e542d1cb962"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8hpp.html#a8a2a5733d2bd9f77b4be0e542d1cb962">utl::meanMaxError</a> (const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibersA, const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibersB, double &amp;meanError, float &amp;maxError, uint64_t &amp;totalNbPts)</td></tr>
+<tr class="memdesc:a8a2a5733d2bd9f77b4be0e542d1cb962"><td class="mdescLeft">&#160;</td><td class="mdescRight">meanMaxError Function to compute average and maximum error between two sets of fibers containing the exact same number of points and fibers  <a href="utilities_8hpp.html#a8a2a5733d2bd9f77b4be0e542d1cb962">More...</a><br /></td></tr>
+<tr class="separator:a8a2a5733d2bd9f77b4be0e542d1cb962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a063978aa989e83a4c4873178ae9fea4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8hpp.html#a063978aa989e83a4c4873178ae9fea4c">utl::error</a> (const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibersA, const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibersB, vector&lt; float &gt; &amp;minError, vector&lt; double &gt; &amp;meanError, vector&lt; float &gt; &amp;maxError, float &amp;minEndPointError, float &amp;meanEndPointError, float &amp;maxEndPointError, uint64_t &amp;totalNbPts, unsigned steps=10, float minValue=35, float maxValue=260)</td></tr>
+<tr class="memdesc:a063978aa989e83a4c4873178ae9fea4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">error Function to compute the error between two sets of fibers with the exact same number of points and fibers This error is computed depending on the length of the fibers  <a href="utilities_8hpp.html#a063978aa989e83a4c4873178ae9fea4c">More...</a><br /></td></tr>
+<tr class="separator:a063978aa989e83a4c4873178ae9fea4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="file_a361ee6d9967ba418806b016d7c287389"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a361ee6d9967ba418806b016d7c287389">&#9670;&nbsp;</a></span>error()</h2>
+<a id="file_a063978aa989e83a4c4873178ae9fea4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a063978aa989e83a4c4873178ae9fea4c">&#9670;&nbsp;</a></span>error()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -105,7 +105,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>meanError</em>, </td>
         </tr>
         <tr>
@@ -131,6 +131,12 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">float &amp;&#160;</td>
           <td class="paramname"><em>maxEndPointError</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>totalNbPts</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -169,6 +175,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">minEndPointError</td><td>Minimum error on every end point </td></tr>
     <tr><td class="paramname">meanEndPointError</td><td>Average error on every end point </td></tr>
     <tr><td class="paramname">maxEndPointError</td><td>Maximum error on every end point </td></tr>
+    <tr><td class="paramname">totalNbPts</td><td>Variable containing the total number of points in the bundle, used for average error computation </td></tr>
     <tr><td class="paramname">steps</td><td>Number of length separation to perform </td></tr>
     <tr><td class="paramname">minValue</td><td>Minimum length to consider </td></tr>
     <tr><td class="paramname">maxValue</td><td>Maximum length to consider </td></tr>
@@ -178,8 +185,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="file_ab5e5c77dec64278196b6f58a6955e9a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ab5e5c77dec64278196b6f58a6955e9a6">&#9670;&nbsp;</a></span>meanMaxError()</h2>
+<a id="file_a8a2a5733d2bd9f77b4be0e542d1cb962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a8a2a5733d2bd9f77b4be0e542d1cb962">&#9670;&nbsp;</a></span>meanMaxError()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,14 +206,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>meanError</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float &amp;&#160;</td>
-          <td class="paramname"><em>maxError</em>&#160;</td>
+          <td class="paramname"><em>maxError</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>totalNbPts</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -223,6 +236,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">fibersB</td><td>Vector containing the second set of fibers </td></tr>
     <tr><td class="paramname">meanError</td><td>Average error </td></tr>
     <tr><td class="paramname">maxError</td><td>Maximum error </td></tr>
+    <tr><td class="paramname">totalNbPts</td><td>Variable containing the total number of points in the bundle, used for average error computation </td></tr>
   </table>
   </dd>
 </dl>

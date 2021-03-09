@@ -83,6 +83,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isinf</b> (const Vect
 <tr class="memitem:aebf17473e85a26731213af897f8a8419"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="saveload_8hpp.html#aebf17473e85a26731213af897f8a8419">fls::loadCompressAndSave</a> (const string &amp;filename_in, const string &amp;filename_out)</td></tr>
 <tr class="memdesc:aebf17473e85a26731213af897f8a8419"><td class="mdescLeft">&#160;</td><td class="mdescRight">loadCompressAndSave Function to compress fibers out-of-core  <a href="saveload_8hpp.html#aebf17473e85a26731213af897f8a8419">More...</a><br /></td></tr>
 <tr class="separator:aebf17473e85a26731213af897f8a8419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631b40950c1b7ca524c1db4109b9fe65"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a631b40950c1b7ca524c1db4109b9fe65"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="saveload_8hpp.html#a631b40950c1b7ca524c1db4109b9fe65">fls::loadCompressAndSaveWithError</a> (const string &amp;filename_in, const string &amp;filename_out)</td></tr>
+<tr class="memdesc:a631b40950c1b7ca524c1db4109b9fe65"><td class="mdescLeft">&#160;</td><td class="mdescRight">loadCompressAndSaveWithError Function to compress fibers out-of-core while computing the error  <a href="saveload_8hpp.html#a631b40950c1b7ca524c1db4109b9fe65">More...</a><br /></td></tr>
+<tr class="separator:a631b40950c1b7ca524c1db4109b9fe65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21c7052b4266b9356696ec93fd00606d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a21c7052b4266b9356696ec93fd00606d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="saveload_8hpp.html#a21c7052b4266b9356696ec93fd00606d">fls::loadDecompressAndSave</a> (const string &amp;filename_in, const string &amp;filename_out)</td></tr>
 <tr class="memdesc:a21c7052b4266b9356696ec93fd00606d"><td class="mdescLeft">&#160;</td><td class="mdescRight">loadDecompressAndSave Function to decompress fibers out_of_core  <a href="saveload_8hpp.html#a21c7052b4266b9356696ec93fd00606d">More...</a><br /></td></tr>
@@ -165,6 +169,45 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>loadCompressAndSave Function to compress fibers out-of-core </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename_in</td><td>Path of the input file (tck) </td></tr>
+    <tr><td class="paramname">filename_out</td><td>Path of the output file (qfib) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_a631b40950c1b7ca524c1db4109b9fe65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a631b40950c1b7ca524c1db4109b9fe65">&#9670;&nbsp;</a></span>loadCompressAndSaveWithError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void fls::loadCompressAndSaveWithError </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>filename_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>filename_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>loadCompressAndSaveWithError Function to compress fibers out-of-core while computing the error </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename_in</td><td>Path of the input file (tck) </td></tr>

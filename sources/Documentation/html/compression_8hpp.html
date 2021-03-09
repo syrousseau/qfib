@@ -108,22 +108,22 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memdesc:a584cdef7608e5b879499e0ea21fb14a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">inverseUniformMapping Inverse uniform mapping from uniquant (Fast lossy compression of 3d unit vectors)  <a href="compression_8hpp.html#a584cdef7608e5b879499e0ea21fb14a8">More...</a><br /></td></tr>
 <tr class="separator:a584cdef7608e5b879499e0ea21fb14a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10397e1b367d00510930f61a03c57f0a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compression_8hpp.html#a10397e1b367d00510930f61a03c57f0a">fc::computeRatio</a> (const std::vector&lt; Vector3f &gt; &amp;fibers)</td></tr>
-<tr class="memdesc:a10397e1b367d00510930f61a03c57f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">computeRatio Compute the ratio of the input fiber (only one)  <a href="compression_8hpp.html#a10397e1b367d00510930f61a03c57f0a">More...</a><br /></td></tr>
+<tr class="memdesc:a10397e1b367d00510930f61a03c57f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">computeRatio Compute the minimum dot product of the input fiber (only one)  <a href="compression_8hpp.html#a10397e1b367d00510930f61a03c57f0a">More...</a><br /></td></tr>
 <tr class="separator:a10397e1b367d00510930f61a03c57f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d5cb1261dee3c3fd8c68baebfe74811"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compression_8hpp.html#a0d5cb1261dee3c3fd8c68baebfe74811">fc::computeRatioVerif</a> (const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibers, bool verbose)</td></tr>
-<tr class="memdesc:a0d5cb1261dee3c3fd8c68baebfe74811"><td class="mdescLeft">&#160;</td><td class="mdescRight">computeRatioVerif Compute the ratio of the input fibers and verify that stepsizes are almost constant  <a href="compression_8hpp.html#a0d5cb1261dee3c3fd8c68baebfe74811">More...</a><br /></td></tr>
-<tr class="separator:a0d5cb1261dee3c3fd8c68baebfe74811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13dedd0e5f6c77bab9d6b275884fafb1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compression_8hpp.html#a13dedd0e5f6c77bab9d6b275884fafb1">fc::computeRatio</a> (const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibers, bool verbose)</td></tr>
-<tr class="memdesc:a13dedd0e5f6c77bab9d6b275884fafb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">computeRatioVerif Compute the ratio of the input fibers without verifying that stepsizes are almost constant  <a href="compression_8hpp.html#a13dedd0e5f6c77bab9d6b275884fafb1">More...</a><br /></td></tr>
-<tr class="separator:a13dedd0e5f6c77bab9d6b275884fafb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57112cb0b2957f8a47ff8785347a9a82"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compression_8hpp.html#a57112cb0b2957f8a47ff8785347a9a82">fc::computeRatioVerif</a> (const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibers, bool verbose, uint64_t &amp;totalNbPts)</td></tr>
+<tr class="memdesc:a57112cb0b2957f8a47ff8785347a9a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">computeRatioVerif Compute the ratio of the input fibers and verify that stepsizes are almost constant  <a href="compression_8hpp.html#a57112cb0b2957f8a47ff8785347a9a82">More...</a><br /></td></tr>
+<tr class="separator:a57112cb0b2957f8a47ff8785347a9a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be9797b752eed54538272439c414173"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compression_8hpp.html#a5be9797b752eed54538272439c414173">fc::computeRatio</a> (const std::vector&lt; std::vector&lt; Vector3f &gt; &gt; &amp;fibers, bool verbose, uint64_t &amp;totalNbPts)</td></tr>
+<tr class="memdesc:a5be9797b752eed54538272439c414173"><td class="mdescLeft">&#160;</td><td class="mdescRight">computeRatioVerif Compute the ratio of the input fibers without verifying that stepsizes are almost constant  <a href="compression_8hpp.html#a5be9797b752eed54538272439c414173">More...</a><br /></td></tr>
+<tr class="separator:a5be9797b752eed54538272439c414173"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3561440b710af86644509f767c1643ca"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a3561440b710af86644509f767c1643ca"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="compression_8hpp.html#a3561440b710af86644509f767c1643ca">fc::compressFiber</a> (const std::vector&lt; Vector3f &gt; &amp;fiber, const float ratio, <a class="el" href="structCompressedFiber.html">CompressedFiber</a>&lt; T &gt; &amp;cfiber)</td></tr>
 <tr class="memdesc:a3561440b710af86644509f767c1643ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">compressFiber Compression of the fiber considering its ratio  <a href="compression_8hpp.html#a3561440b710af86644509f767c1643ca">More...</a><br /></td></tr>
 <tr class="separator:a3561440b710af86644509f767c1643ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b5939b3889f993b693ed28b1e0d13ad"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a9b5939b3889f993b693ed28b1e0d13ad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="compression_8hpp.html#a9b5939b3889f993b693ed28b1e0d13ad">fc::compressFiber</a> (const std::vector&lt; Vector3f &gt; &amp;fiber, const float ratio, <a class="el" href="structCompressedFiber.html">CompressedFiber</a>&lt; T &gt; &amp;cfiber, float &amp;maxError, float &amp;meanError)</td></tr>
-<tr class="memdesc:a9b5939b3889f993b693ed28b1e0d13ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">compressFiber Compression of the fiber considering its ratio, computing the obtained error at the same time  <a href="compression_8hpp.html#a9b5939b3889f993b693ed28b1e0d13ad">More...</a><br /></td></tr>
-<tr class="separator:a9b5939b3889f993b693ed28b1e0d13ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1f4b6cac145d20cdc9986b7fcf9a02"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:adf1f4b6cac145d20cdc9986b7fcf9a02"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="compression_8hpp.html#adf1f4b6cac145d20cdc9986b7fcf9a02">fc::compressFiber</a> (const std::vector&lt; Vector3f &gt; &amp;fiber, const float ratio, <a class="el" href="structCompressedFiber.html">CompressedFiber</a>&lt; T &gt; &amp;cfiber, float &amp;maxError, double &amp;meanError)</td></tr>
+<tr class="memdesc:adf1f4b6cac145d20cdc9986b7fcf9a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">compressFiber Compression of the fiber considering its ratio, computing the obtained error at the same time  <a href="compression_8hpp.html#adf1f4b6cac145d20cdc9986b7fcf9a02">More...</a><br /></td></tr>
+<tr class="separator:adf1f4b6cac145d20cdc9986b7fcf9a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40a97ed6e8d99e9521583681df87168c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a40a97ed6e8d99e9521583681df87168c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="compression_8hpp.html#a40a97ed6e8d99e9521583681df87168c">fc::decompressFiber</a> (const <a class="el" href="structCompressedFiber.html">CompressedFiber</a>&lt; T &gt; &amp;cfiber, const float ratio, std::vector&lt; Vector3f &gt; &amp;fiber)</td></tr>
 <tr class="memdesc:a40a97ed6e8d99e9521583681df87168c"><td class="mdescLeft">&#160;</td><td class="mdescRight">decompressFiber Decompress the input fiber  <a href="compression_8hpp.html#a40a97ed6e8d99e9521583681df87168c">More...</a><br /></td></tr>
@@ -186,8 +186,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="file_a9b5939b3889f993b693ed28b1e0d13ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a9b5939b3889f993b693ed28b1e0d13ad">&#9670;&nbsp;</a></span>compressFiber() <span class="overload">[2/2]</span></h2>
+<a id="file_adf1f4b6cac145d20cdc9986b7fcf9a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_adf1f4b6cac145d20cdc9986b7fcf9a02">&#9670;&nbsp;</a></span>compressFiber() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,7 +221,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramtype">double &amp;&#160;</td>
           <td class="paramname"><em>meanError</em>&#160;</td>
         </tr>
         <tr>
@@ -263,19 +263,19 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>computeRatio Compute the ratio of the input fiber (only one) </p>
+<p>computeRatio Compute the minimum dot product of the input fiber (only one) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fibers</td><td>Fiber from which to compute the ratio </td></tr>
+    <tr><td class="paramname">fiber</td><td>Fiber from which to compute the minimum dot product </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Ratio of the unique fiber </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Minimum dot product of the unique fiber </dd></dl>
 
 </div>
 </div>
-<a id="file_a13dedd0e5f6c77bab9d6b275884fafb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a13dedd0e5f6c77bab9d6b275884fafb1">&#9670;&nbsp;</a></span>computeRatio() <span class="overload">[2/2]</span></h2>
+<a id="file_a5be9797b752eed54538272439c414173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a5be9797b752eed54538272439c414173">&#9670;&nbsp;</a></span>computeRatio() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +290,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em>&#160;</td>
+          <td class="paramname"><em>verbose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>totalNbPts</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -305,6 +311,7 @@ template&lt;typename T &gt; </div>
   <table class="params">
     <tr><td class="paramname">fibers</td><td>Fibers from which to compute the ratio </td></tr>
     <tr><td class="paramname">verbose</td><td>Parameter to display the maximum angle if true </td></tr>
+    <tr><td class="paramname">totalNbPts</td><td>Variable that will contain the total number of points in the bundle, used for average error computation </td></tr>
   </table>
   </dd>
 </dl>
@@ -312,8 +319,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="file_a0d5cb1261dee3c3fd8c68baebfe74811"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a0d5cb1261dee3c3fd8c68baebfe74811">&#9670;&nbsp;</a></span>computeRatioVerif()</h2>
+<a id="file_a57112cb0b2957f8a47ff8785347a9a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a57112cb0b2957f8a47ff8785347a9a82">&#9670;&nbsp;</a></span>computeRatioVerif()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,7 +335,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em>&#160;</td>
+          <td class="paramname"><em>verbose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>totalNbPts</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -343,6 +356,7 @@ template&lt;typename T &gt; </div>
   <table class="params">
     <tr><td class="paramname">fibers</td><td>Fibers from which to compute the ratio </td></tr>
     <tr><td class="paramname">verbose</td><td>Parameter to display the maximum angle if true </td></tr>
+    <tr><td class="paramname">totalNbPts</td><td>Variable that will contain the total number of points in the bundle, used for average error computation </td></tr>
   </table>
   </dd>
 </dl>

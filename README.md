@@ -1,4 +1,4 @@
-<p align="center"><img src="sources/Documentation/html/qfib.png" width="200" /></p>
+<p align="center"><img src="qfib.png" width="200" /></p>
 
 # Overview
 This software compress and decompress dMRI brain tractograms. Those tractograms should have been generated using a method that ensure a constant stepsize along each individual fiber. This property can be checked using our software. We currently can compress .tck files, and decompressed .qfib files. This is the C++ reference implementation for the paper: 
@@ -16,19 +16,27 @@ Copyright(C) 2019-2020 Corentin Mercier, Sylvain Rousseau, Pietro Gori, Isabelle
 All right reserved
 
 ## Release Notes ##
+
+### v1.1 ###
+* Corrected an error in the out-of-core version of the algorithm that resulted in incorrect files
+* Added the possibility of computing the error in out-of-core mode
+* Removed OpenMP, using C++ threads instead (OpenMP can still be used, see compile options)
+
 ### v1.0 ###
-Initial version
+* Initial version
 
 # Building and Running
 
-This program uses CMake. It has been tested on Linux using Ubuntu 18.04 (LTS) with gcc 7.3 and Ubuntu 16.04 (LTS) with gcc 5.4. Building on Windows 10 or MacOS has not been tested. Direct compatibility with visual c++ is not ensured as their version of OpenMP (that we used to parallelize our code) is too old, and we are using getopt.h. The easiest way to get a working version *under* windows is to use WSL. To build the source code, you can use the following commands: 
+This program uses CMake. It has been tested on Linux using Ubuntu 18.04 (LTS) with gcc 7.3 and Ubuntu 16.04 (LTS) with gcc 5.4. Building on Windows 10 or MacOS has not been tested. Direct compatibility with visual c++ is not ensured as we are using getopt.h (do not use OpenMP with Windows, as their version is too old). The easiest way to get a working version *under* windows is to use WSL. To build the source code, you can use the following commands: 
 
 ```
 mkdir qfib/build
 cd qfib/build
 cmake -DCMAKE_BUILD_TYPE=Release ..
-make -j8
+make
 ```
+
+By default, the code uses C++ threads for parallelization, however, it is possible to use OpenMP instead by using the cmake flag ```-DUSE_OPENMP=true```. From our testings, C++ threads deliver equivalent - if not better - performance.
 
 Then, you can simply compress a file with the default parameters (8 bits spherical Fibonacci, incore, with data validity verification) using the following command line:
 
@@ -40,8 +48,8 @@ and decompress a file in the same way
 ```
 ./qfib path/file.qfib
 ```
-It is not necessary to indicate the parameters of the compression during decompression as these informations are stored in the compressed file. Some option can be activated to improve the performances (remove checkings), modify the quantization method or precision, or to display more informations. 
-Those option can be activated using the following flags: 
+It is not necessary to indicate the parameters of the compression during decompression as these informations are stored in the compressed file. Some options can be activated to improve the performances (remove checkings), modify the quantization method or precision, or to display more information. 
+These options can be activated using the following flags: 
 
 ```
 -u or --out_of_core: force out-of-core, in case there is not enough RAM (default is in core)
@@ -79,7 +87,9 @@ sudo docker run -v /path/to/folder/containing/the/fibers:/src/data qfib:1.0 ../d
 This project is licensed under the MIT license - see the [LICENSE](LICENSE) file for details.
 
 All right reserved. The Authors
+
 # Data 
+
 Data can be generated using [MrTrix](https://www.mrtrix.org).
 
 Some examples are available here: https://gitlab.com/comercier/qfib-data

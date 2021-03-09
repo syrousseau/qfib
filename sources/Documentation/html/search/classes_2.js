@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timer',['Timer',['../classTimer.html',1,'']]]
+  ['parallel',['Parallel',['../classParallel.html',1,'']]]
 ];

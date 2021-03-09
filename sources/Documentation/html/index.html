@@ -68,7 +68,7 @@ $(function() {
 </div>
 <h1>Overview</h1>
 <p>This software compress and decompress dMRI brain tractograms. Those tractograms should have been generated using a method that ensure a constant stepsize along each individual fiber. This property can be checked using our software. We currently can compress .tck files, and decompressed .qfib files. This is the C++ reference implementation for the paper:</p>
-<p><b>QFib: Fast and Efficient Brain Tractogram Compression</b> <br />
+<p>&gt;**QFib: Fast and Efficient Brain Tractogram Compression** <br />
  <em>Corentin Mercier*, Sylvain Rousseau*, Pietro Gori, Isabelle Bloch and Tamy Boubekeur.</em><br />
  (* C. Mercier · S. Rousseau contributed equally to this work)<br />
  NeuroInformatics 2020<br />
@@ -78,12 +78,21 @@ $(function() {
 <p>Copyright(C) 2019-2020 Corentin Mercier, Sylvain Rousseau, Pietro Gori, Isabelle Bloch and Tamy Boubekeur</p>
 <p>All right reserved</p>
 <h2>Release Notes</h2>
+<h3>v1.1</h3>
+<ul>
+<li>Corrected an error in the out-of-core version of the algorithm that resulted in incorrect files</li>
+<li>Added the possibility of computing the error in out-of-core mode</li>
+<li>Removed OpenMP, using C++ threads instead (OpenMP can still be used, see compile options)</li>
+</ul>
 <h3>v1.0</h3>
-<p>Initial version</p>
+<ul>
+<li>Initial version</li>
+</ul>
 <h1>Building and Running</h1>
-<p>This program uses CMake. It has been tested on Linux using Ubuntu 18.04 (LTS) with gcc 7.3 and Ubuntu 16.04 (LTS) with gcc 5.4. Building on Windows 10 or MacOS has not been tested. Direct compatibility with visual c++ is not ensured as their version of OpenMP (that we used to parallelize our code) is too old, and we are using getopt.h. The easiest way to get a working version <em>under</em> windows is to use WSL. To build the source code, you can use the following commands:</p>
-<div class="fragment"><div class="line">mkdir qfib/build</div><div class="line">cd qfib/build</div><div class="line">cmake -DCMAKE_BUILD_TYPE=Release ..</div><div class="line">make -j8</div></div><!-- fragment --><p>Then, you can simply compress a file with the default parameters (8 bits spherical Fibonacci, incore, with data validity verification) using the following command line:</p>
-<div class="fragment"><div class="line">./qfib path/file.tck</div></div><!-- fragment --><p>and decompress a file in the same way </p><div class="fragment"><div class="line">./qfib path/file.qfib</div></div><!-- fragment --><p> It is not necessary to indicate the parameters of the compression during decompression as these informations are stored in the compressed file. Some option can be activated to improve the performances (remove checkings), modify the quantization method or precision, or to display more informations. Those option can be activated using the following flags:</p>
+<p>This program uses CMake. It has been tested on Linux using Ubuntu 18.04 (LTS) with gcc 7.3 and Ubuntu 16.04 (LTS) with gcc 5.4. Building on Windows 10 or MacOS has not been tested. Direct compatibility with visual c++ is not ensured as we are using getopt.h (do not use OpenMP with Windows, as their version is too old). The easiest way to get a working version <em>under</em> windows is to use WSL. To build the source code, you can use the following commands:</p>
+<div class="fragment"><div class="line">mkdir qfib/build</div><div class="line">cd qfib/build</div><div class="line">cmake -DCMAKE_BUILD_TYPE=Release ..</div><div class="line">make</div></div><!-- fragment --><p>By default, the code uses C++ threads for parallelization, however, it is possible to use OpenMP instead by using the cmake flag <code>-DUSE_OPENMP=true</code>. From our testings, C++ threads deliver equivalent - if not better - performance.</p>
+<p>Then, you can simply compress a file with the default parameters (8 bits spherical Fibonacci, incore, with data validity verification) using the following command line:</p>
+<div class="fragment"><div class="line">./qfib path/file.tck</div></div><!-- fragment --><p>and decompress a file in the same way </p><div class="fragment"><div class="line">./qfib path/file.qfib</div></div><!-- fragment --><p> It is not necessary to indicate the parameters of the compression during decompression as these informations are stored in the compressed file. Some options can be activated to improve the performances (remove checkings), modify the quantization method or precision, or to display more information. These options can be activated using the following flags:</p>
 <div class="fragment"><div class="line">-u or --out_of_core: force out-of-core, in case there is not enough RAM (default is in core)</div><div class="line">-o or --octahedral: force octahedral quantification, only for compression (default is fibonacci)</div><div class="line">-b or --16bits: compress using 16 bits (default is 8 bits)</div><div class="line">-t or --timings: display compression and decompression times</div><div class="line">-e or --error: display the error when compressing fibers</div><div class="line">-d or --detailed-error: display a detailed error when compressing fibers</div><div class="line">-v or --verbose: display additional details</div><div class="line">-n or --no-verif: no verification of data constant stepsize for better performance</div><div class="line">-f or --fa + filename: compare fa values after compression and decompression</div><div class="line">-c or --compression-ratio: display compression ratio when compressing fibers</div><div class="line">-h or --help: access to this help</div></div><!-- fragment --><h1>Docker</h1>
 <p>To use docker with the code, you can use the following commands: </p><div class="fragment"><div class="line">sudo docker build --rm -f C++Base -t cpp-build-base:1.0 .</div><div class="line">sudo docker build --rm -f QfibDocker -t qfib:1.0 .</div><div class="line">sudo docker run -v /path/to/folder/containing/the/fibers:/src/data qfib:1.0 ../data/file -o -t</div></div><!-- fragment --><h1>Authors</h1>
 <ul>
@@ -95,8 +104,10 @@ $(function() {
 </ul>
 <h1>License</h1>
 <p>This project is licensed under the MIT license - see the [LICENSE](LICENSE) file for details.</p>
-<p>All right reserved. The Authors </p><h1>Data</h1>
-<p>Data can be generated using <a href="https://www.mrtrix.org">MrTrix</a> </p>
+<p>All right reserved. The Authors</p>
+<h1>Data</h1>
+<p>Data can be generated using <a href="https://www.mrtrix.org">MrTrix</a>.</p>
+<p>Some examples are available here: <a href="https://gitlab.com/comercier/qfib-data">https://gitlab.com/comercier/qfib-data</a> </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
